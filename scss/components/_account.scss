@@ -1,0 +1,177 @@
+.account{
+    margin: 100px 0;
+    .account__top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    .account__top p:nth-child(1){
+        color: #4e4e4e;
+        cursor: pointer;
+        span{
+            color: #000;
+            font-weight: 700;
+        }
+    }
+    .account__top p:nth-child(2){
+        span{
+            color: $bg-last;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+    .account__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        .account__left{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .account__child{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .account__collection{
+                    margin-left: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        }
+        .account__right{
+            box-shadow: 0px 1px 13px 0px #0000000D;
+            padding: 40px 80px;
+            width: 100%;
+            h2{
+                margin-bottom: 16px;
+                color: $bg-last;
+                font-weight: 500;
+            }
+            .account__form{
+                .account__name{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 50px;
+                    margin-bottom: 24px;
+                    .account__name-item{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        label{
+                            font-weight: 600;
+                        }
+                        input{
+                            height: 50px;
+                            border: none;
+                            background: #f5f5f5;
+                            border-radius: 4px;
+                            text-indent: 16px;
+                            outline: none;
+                        }
+                    }
+                }
+                .account__password{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    margin-bottom: 24px;
+                    label{
+                        font-weight: 600;
+                    }
+                    input{
+                        width: 100%;
+                        height: 50px;
+                        border: none;
+                        background: #f5f5f5;
+                        border-radius: 4px;
+                        text-indent: 16px;
+                        outline: none;
+                    }
+                }
+                .account__buttons{
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 12px;
+                }
+                .account__buttons button:nth-child(1){
+                    padding: 16px 20px;
+                    background: transparent;
+                }
+                .account__buttons button:nth-child(2){
+                    padding: 16px 48px;
+                    background: $bg-last;
+                    color: #fff;
+                    border-radius: 4px;
+                }
+                .account__buttons button:nth-child(2):hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 1100px) {
+    .account{
+        margin: 60px 0;
+        .account__top{
+            margin-bottom: 60px;
+        }
+        .account__wrapper{
+            justify-content: center;
+            gap: 50px;
+            .account__left{
+                display: none;
+            }
+            .account__right{
+                padding: 30px 60px;
+                .account__form{
+                    .account__name{
+                        grid-gap: 30px;
+                        .account__name-item{
+                            input{
+                                height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .account{
+        margin: 60px 0;
+        .account__top{
+            margin-bottom: 60px;
+        }
+        .account__wrapper{
+            justify-content: center;
+            gap: 50px;
+            .account__left{
+                display: none;
+            }
+            .account__right{
+                padding: 30px 60px;
+                .account__form{
+                    .account__name{
+                        grid-template-columns: 1fr;
+                        grid-gap: 30px;
+                        .account__name-item{
+                            input{
+                                height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
